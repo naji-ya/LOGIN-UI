@@ -12,10 +12,10 @@ class Button extends StatefulWidget {
   State<Button> createState() => _ButtonState();
 }
 
-int index = 0;
-bool isClickedOn() {
-  
-  return false;
+void isClickedOn(BuildContext context, userClicked) {
+  if (userClicked == true) {
+    Navigator.pushNamed(context, 'sign_in');
+  }
 }
 
 class _ButtonState extends State<Button> {
@@ -31,9 +31,10 @@ class _ButtonState extends State<Button> {
       child: Row(children: [
         // register button
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            isClickedOn(context, false);
+          },
           child: Container(
-            
             height: 70,
             width: 173,
             decoration: BoxDecoration(
@@ -52,7 +53,9 @@ class _ButtonState extends State<Button> {
 
         // login button
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            isClickedOn(context, true);
+          },
           child: Container(
             height: 70,
             width: 173,

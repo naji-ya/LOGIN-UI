@@ -11,7 +11,7 @@ class ImagesNetwork extends StatelessWidget {
           border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(8)),
       height: 50,
-      width: 80,
+      width: 90,
       child: Image(
         image: NetworkImage(networkImage),
         height: 20,

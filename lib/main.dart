@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui/screens/homePage.dart';
 import 'package:login_ui/screens/sign_in.dart';
 
 void main() {
@@ -11,9 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      home: const HomePage(),
+      routes: {
+        'sign_in': (context) => const SignInPage(),
+      },
     );
   }
 }
