@@ -6,14 +6,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          height: 100,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(13),
+      body: SizedBox(
+        height: 450,
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(45),
           ),
-          child: Image.asset("assets/girl.jpg"),
+          child: Image.asset(
+            "assets/image.PNG",
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
