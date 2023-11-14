@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:login_ui/style/theme.dart';
 
 import '../utils/button.dart';
 
@@ -9,8 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(235, 231, 227, 227),
-      // image
+      backgroundColor: bgcolor, // image
       body: Column(
         children: [
           SizedBox(
@@ -27,19 +27,19 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 55,
+            height: 70,
           ),
 // text to discover
 
           const Text("Discover your",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 33,
                 fontWeight: FontWeight.bold,
               )),
           const Text(
             "Dream job Here",
             style: TextStyle(
-              fontSize: 35,
+              fontSize: 33,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -52,22 +52,27 @@ class HomePage extends StatelessWidget {
           Text(
             "Explore of the most exiting job roles",
             style: GoogleFonts.dmSans(
-                fontSize: 20, color: const Color.fromARGB(255, 132, 130, 130)),
+                fontSize: 18, color: const Color.fromARGB(255, 132, 130, 130)),
           ),
           Text(
             "based on your interest and study major",
             style: GoogleFonts.dmSans(
-                fontSize: 20, color: const Color.fromARGB(255, 152, 148, 148)),
+                fontSize: 18, color: const Color.fromARGB(255, 152, 148, 148)),
           ),
 
           const SizedBox(
-            height: 30,
+            height: 50,
           ),
           // button
 
-          const Padding(
-            padding: EdgeInsets.all(30.0),
-            child: Button(),
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Button(
+            
+              onTap: () {
+                Navigator.pushNamed(context, 'signin');
+              },
+            ),
           ),
         ],
       ),
