@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_ui/style/theme.dart';
+import 'package:login_ui/utils/images.dart';
 import 'package:login_ui/utils/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -136,18 +137,52 @@ class SignInPage extends StatelessWidget {
                   height: 30,
                 ),
 
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Center(
+                    child: Row(
+                      children: const [
+                        ImagesNetwork(
+                          networkImage:
+                              "https://i.pinimg.com/originals/8c/03/0b/8c030bd6bd7ee87ad41485e3c7598dd4.png",
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        ImagesNetwork(
+                            networkImage:
+                                "https://logospng.org/download/apple/logo-apple-4096.png"),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        ImagesNetwork(
+                            networkImage:
+                                "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png"),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // rester text
+                const SizedBox(
+                  height: 60,
+                ),
                 Row(
-                  children: [
-                    SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset(
-                        "assets.Google-Logo.jpg",
-                        fit: BoxFit.cover,
-                      ),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Not a member?",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Text(
+                      "Register now",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          fontSize: 16),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
